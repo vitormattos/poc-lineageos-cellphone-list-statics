@@ -36,159 +36,31 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item active" aria-current="page"><a href="/poc-lineageos-cellphone-list-statics//" aria-current="page">Home</a></li>
                                                     <li class="breadcrumb-item">
-                                                                    Samsung Galaxy Note 3 LTE (N900K/L/S) (hltekor)
+                                                                    Login
                                                             </li>
                                             </ol>
                 </nav>
             </div>
         </section>
 
-            <section class="section-content padding-y">
-        <div class="container">
-            <div class="row no-gutters">
-    <div class="col-md-6">
-        <img src="/poc-lineageos-cellphone-list-statics//images/devices/hlte.png" class="page-device-image" />
+        <section class="section-content padding-y">
+    <div class="card mx-auto" style="max-width:520px; margin-top:40px;">
+        <div class="card-body">
+            <h4 class="card-title mb-4">Fake sign in</h4>
+            <form method="POST" action="/poc-lineageos-cellphone-list-statics//private.json" id="login">
+                <div class="form-group">
+                   <input name="username" class="form-control" placeholder="Username" type="text">
+                </div>
+                <div class="form-group">
+                  <input name="password" class="form-control" placeholder="Password" type="password">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+                </div>
+            </form>
+        </div>
     </div>
-    <table class="deviceinfo table col-md-6">
-        <tbody>
-        <tr>
-            <th colspan="2" class="head">Samsung Galaxy Note 3 LTE (N900K/L/S) (hltekor)</th>
-        </tr>
-        <tr>
-            <th scope="row">Released</th>
-            <td>
-                                            September 2013
-                            </td>
-        </tr>
-    
-        <tr>
-                </tr>
-    
-        <tr>
-            <th scope="row" colspan="2" class="head">Specifications</td>
-        </tr>
-        <tr>
-            <th scope="row">SoC</td>
-            <td>Qualcomm MSM8974AB Snapdragon 800</td>
-        </tr>
-        <tr>
-            <th scope="row">RAM</td>
-            <td>3 GB</td>
-        </tr>
-        <tr>
-            <th scope="row">CPU</td>
-            <td>
-                                        Quad-core
-                         Krait 400<br>2.3 GHz
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">Architecture</td>
-            <td>
-                                    arm
-                            </td>
-        </tr>
-        <tr>
-            <th scope="row">GPU</td>
-            <td>Adreno 330</td>
-        </tr>
-                <tr>
-            <th scope="row">Storage</td>
-            <td>16/32/64 GB</td>
-        </tr>
-                <tr>
-            <th scope="row">SD card</td>
-            <td>up to 64 GB</td>
-        </tr>
-                        <tr>
-            <th scope="row">Screen</td>
-            <td>
-                                    144.78 mm (5.7 in)
-                 <br>
-                1080x1920 (386 PPI)<br>
-                Full Super AMOLED
-            </td>
-        </tr>
-                        <tr>
-            <th scope="row">Bluetooth</td>
-            <td>
-                                    4.0 + LE with A2DP                            </td>
-        </tr>
-                        <tr>
-            <th scope="row">Wi-Fi</td>
-            <td>802.11 a/b/g/n/ac, Dual-band, DLNA, Wi-Fi Direct, Hotspot</td>
-        </tr>
-                        <tr>
-            <th scope="row">Peripherals</td>
-            <td>
-                <ul>
-                                    <li>Accelerometer</li>
-                                    <li>Gyroscope</li>
-                                    <li>Proximity sensor</li>
-                                    <li>Compass</li>
-                                    <li>Barometer</li>
-                                    <li>Thermometer</li>
-                                    <li>Hygrometer</li>
-                                    <li>NFC</li>
-                                    <li>GPS</li>
-                                    <li>GLONASS</li>
-                                </ul>
-            </td>
-        </tr>
-                                <tr>
-            <th scope="row">Dimensions</td>
-            <td>
-                                    151.2 mm (5.95 in) (h)<br>
-                                                    79.2 mm (3.12 in) (w)<br>
-                                                    8.3 mm (0.33 in) (d)<br>
-                            </td>
-        </tr>
-                        <tr>
-            <th scope="row">Battery</td>
-            <td>
-                                                        Removable
- &nbsp;
-    Li-Ion&nbsp;
-    3200 mAh
-                            </td>
-        </tr>
-                <!-- lineage info -->
-                <tr>
-            <th scope="row" colspan="2" class="head">LineageOS info</td>
-        </tr>
-        <tr>
-            <th scope="row">Maintainers</td>
-            <td>
-                <ul>
-                                            <li>haggertk</li>
-                                            <li>npjohnson</li>
-                                    </ul>
-            </td>
-        </tr>
-                <tr>
-            <th scope="row">Supported models</td>
-            <td>
-                <ul>
-                                <li> SM-N900K
-                                <li> SM-N900L
-                                <li> SM-N900S
-                                </ul>
-            </td>
-        </tr>
-                <tr>
-            <th scope="row">Supported versions</td>
-            <td>
-                <ul>
-                                            <li>14.1</li>
-                                            <li>16</li>
-                                    </ul>
-            </td>
-        </tr>
-            
-        </tbody>
-    </table>
-</div>        </div>
-    </section>
+</section>
         <footer class="section-footer border-top bg">
             <div class="container">
                 <section class="footer-top  padding-y">
@@ -255,5 +127,21 @@
             </div>
         </footer>
         <script src="/poc-lineageos-cellphone-list-statics//assets/build/js/main.js?id=31320b09ce72d5ce440b"></script>
-            </body>
+        <script>
+$("#login").submit(function(e) {
+    e.preventDefault();
+    var form = $(this);
+    var url = form.attr('action');
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: form.serialize(),
+        success: function(data)
+        {
+            alert('Welcome '+$('#login input[name=username]').val())
+        }
+    });
+});
+</script>
+    </body>
 </html>
